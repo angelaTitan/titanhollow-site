@@ -1,0 +1,54 @@
+/* Lets the fixed 1280px mockup shrink to fit tablets and phones. */
+html, body { overflow-x:hidden; }
+body { width:auto !important; max-width:1280px; }
+img { max-width:100%; }
+[style*="width:600px"], [style*="width:620px"], [style*="width:640px"],
+[style*="width:700px"], [style*="width:760px"], [style*="width:820px"],
+[style*="width:1280px"] { max-width:100%; }
+
+/* Tablet and small laptop: pull in the wide side margins */
+@media (max-width:1100px) {
+  [style*="padding:0 90px"] { padding-left:40px !important; padding-right:40px !important; }
+  .section, [style*="90px"] { padding-left:40px !important; padding-right:40px !important; }
+}
+
+/* Phone */
+@media (max-width:760px) {
+  body { font-size:16px; }
+  [style*="padding:0 90px"], .section, [style*="90px"] { padding-left:18px !important; padding-right:18px !important; }
+  [style*="padding:180px"] { padding-top:110px !important; }
+  [style*="padding:100px"] { padding-top:60px !important; }
+
+  /* Rows stack instead of squeezing side by side */
+  [style*="display:flex"] { flex-wrap:wrap !important; row-gap:14px; height:auto !important; }
+  [style*="display:flex"] > [style*="width:"]:not([style*="width:150px"]):not([style*="width:130px"]):not([style*="width:56px"]):not([style*="width:16px"]) { width:100% !important; flex:1 1 100% !important; }
+  /* Small items (hours, day-by-day schedule, tags) stay in compact rows */
+  [style*="display:flex"] > [style*="width:13.7%"],
+  [style*="display:flex"] > [style*="width:16%"] { width:30% !important; flex:1 1 30% !important; min-height:0 !important; }
+
+  /* Schedule rows: date and hours on one line, name underneath */
+  #food-trucks [data-date], #upcoming [data-date] { row-gap:2px !important; padding:12px 0 !important; }
+  #food-trucks [data-date] > div:nth-child(1), #upcoming [data-date] > div:nth-child(1) { width:60% !important; flex:1 1 60% !important; order:1; }
+  #food-trucks [data-date] > div:nth-child(3), #upcoming [data-date] > div:nth-child(3) { width:40% !important; flex:1 1 40% !important; order:2; }
+  #food-trucks [data-date] > div:nth-child(2), #upcoming [data-date] > div:nth-child(2) { order:3; }
+
+  .truck-card { width:48% !important; flex:0 0 48% !important; max-width:48% !important; }
+  #halloween [style*="width:34%"], #hollow-queen [style*="width:34%"] { width:70% !important; flex:0 0 70% !important; margin:0 auto; }
+  #halloween > div, #hollow-queen > div { padding:20px !important; }
+  /* Photos keep a sensible height once full width */
+  .imgbox { height:240px !important; }
+  .imgbox.map { height:200px !important; }
+  .imgbox.poster { height:auto !important; }
+  #lineup [style*="width:32%"] { width:48% !important; flex:1 1 48% !important; }
+  [style*="height:640px"], [style*="height:480px"], [style*="height:420px"] { height:auto !important; min-height:420px; }
+
+  /* Headings scale down */
+  h1 { font-size:34px !important; line-height:1.15 !important; }
+  h2 { font-size:28px !important; line-height:1.2 !important; }
+  h3 { font-size:21px !important; }
+  [style*="font-size:40px"], [style*="font-size:42px"], [style*="font-size:46px"], [style*="font-size:50px"] { font-size:30px !important; }
+
+  /* Header: logo on top, nav links wrap underneath */
+  nav, header { flex-wrap:wrap !important; justify-content:center !important; gap:10px 18px !important; }
+  .btn { padding:12px 18px; }
+}
