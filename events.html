@@ -35,9 +35,11 @@ a { color:#DC9C48; text-decoration:none; }
   <p style="color:#BFB393; font-size:15px; max-width:640px; line-height:1.7;">Featured events on one list, food trucks on another, so you can find what you're actually looking for.</p>
 </div>
 <!-- Event spotlights. Add data-headliner to an event to pin it to the top;
-     everything else sorts by date (data-date), and past events hide automatically. -->
+     everything else sorts by date (data-date), and past events hide automatically.
+     data-when / data-price / data-tickets also feed the announcement bar on every page
+     and the "Tickets On Sale" row on the homepage (see site.js). -->
 <div id="spotlights">
-<div class="section spotlight" id="hollow-queen" data-date="2026-10-16" style="padding-top:10px; padding-bottom:10px;">
+<div class="section spotlight" id="hollow-queen" data-date="2026-10-16" data-when="Fri, Oct 16 &middot; Doors 6pm, show 7pm" data-price="Tickets $20 &middot; 18+" data-tickets="https://order.rezku.com/titanhollow" style="padding-top:10px; padding-bottom:10px;">
   <div style="display:flex; gap:40px; align-items:center; background:#2C2635; border:1px solid rgba(244,238,223,0.14); border-radius:3px; padding:30px;">
     <div style="width:34%;"><img src="images/event-hollow-queen-2026.jpg" alt="Hollow-Queen Cocktail Drag Spook-tacular flyer, presented by Titan Hollow, State Queens, and Mad McIntosh Cider, Friday October 16th" style="width:100%; display:block; border-radius:2px;"></div>
     <div style="width:62%;">
@@ -53,7 +55,7 @@ a { color:#DC9C48; text-decoration:none; }
     </div>
   </div>
 </div>
-<div class="section spotlight" id="halloween" data-date="2026-10-24" data-headliner style="padding-top:10px; padding-bottom:10px;">
+<div class="section spotlight" id="halloween" data-date="2026-10-24" data-headliner data-when="Sat, Oct 24 &middot; 6&ndash;10pm" data-price="Tickets $20 &middot; 21+" data-tickets="https://order.rezku.com/titanhollow" style="padding-top:10px; padding-bottom:10px;">
   <div style="display:flex; gap:40px; align-items:center; background:#2C2635; border:1px solid rgba(244,238,223,0.14); border-radius:3px; padding:30px;">
     <div style="width:34%;"><img src="images/event-mad-hollow-een-2026.jpg" alt="A Very Mad Hollow-een Party flyer: Saturday, October 24, 6 to 10pm, tickets $20, 21 and over" style="width:100%; display:block; border-radius:2px;"></div>
     <div style="width:62%;">
@@ -399,4 +401,5 @@ a { color:#DC9C48; text-decoration:none; }
       <div style="width:26%;"><div class="imgbox map" style="height:150px;"><iframe title="Map to Titan Hollow" src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m2!2m1!1sTitan+Hollow,+2042+Axemann+Road,+Bellefonte,+PA+16823" style="width:100%; height:100%; border:0; display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Titan+Hollow,+2042+Axemann+Road,+Bellefonte,+PA+16823" target="_blank" rel="noopener" style="display:inline-block; margin-top:8px; font-size:13px; font-weight:700;">Get directions &rarr;</a></div>
     </div>
     <div style="background:#121110; text-align:center; font-size:11.5px; color:#BFB393; padding:14px 0 26px; border-top:1px solid rgba(244,238,223,0.14);">&copy; 2026 Titan Hollow. All rights reserved.</div>
-    </body></html>
+    <script src="site.js"></script>
+</body></html>

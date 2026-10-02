@@ -2,6 +2,9 @@
 html, body { overflow-x:hidden; }
 body { width:auto !important; max-width:1280px; }
 img { max-width:100%; }
+/* Sipping hours: keep each day on one line, wrap the row instead */
+[style*="gap:26px; font-size:13px"] { flex-wrap:wrap; row-gap:6px; }
+[style*="gap:26px; font-size:13px"] > div { white-space:nowrap; }
 [style*="width:600px"], [style*="width:620px"], [style*="width:640px"],
 [style*="width:700px"], [style*="width:760px"], [style*="width:820px"],
 [style*="width:1280px"] { max-width:100%; }
@@ -35,6 +38,11 @@ img { max-width:100%; }
   .truck-card { width:48% !important; flex:0 0 48% !important; max-width:48% !important; }
   #halloween [style*="width:34%"], #hollow-queen [style*="width:34%"] { width:70% !important; flex:0 0 70% !important; margin:0 auto; }
   #halloween > div, #hollow-queen > div { padding:20px !important; }
+  .ticket-card { width:100% !important; flex:1 1 100% !important; flex-wrap:nowrap !important; }
+  .ticket-card > a { width:90px !important; flex:0 0 90px !important; }
+  .ticket-card > a img { width:90px !important; height:90px !important; }
+  .ticket-card > div { width:auto !important; flex:1 1 auto !important; }
+  .announce-bar { font-size:13px !important; }
   /* Photos keep a sensible height once full width */
   .imgbox { height:240px !important; }
   .imgbox.map { height:200px !important; }
