@@ -2,6 +2,8 @@
 html, body { overflow-x:hidden; }
 body { width:auto !important; max-width:1280px; }
 img { max-width:100%; }
+.cider-lineup a img { transition:transform .2s ease; }
+.cider-lineup a:hover img { transform:translateY(-4px) rotate(-3deg); }
 /* Sipping hours: keep each day on one line, wrap the row instead */
 [style*="gap:26px; font-size:13px"] { flex-wrap:wrap; row-gap:6px; }
 [style*="gap:26px; font-size:13px"] > div { white-space:nowrap; }
@@ -12,19 +14,19 @@ img { max-width:100%; }
 /* Tablet and small laptop: pull in the wide side margins */
 @media (max-width:1100px) {
   [style*="padding:0 90px"] { padding-left:40px !important; padding-right:40px !important; }
-  .section, [style*="90px"] { padding-left:40px !important; padding-right:40px !important; }
+  .section, [style*="px 90px"], [style*="0 90px"] { padding-left:40px !important; padding-right:40px !important; }
 }
 
 /* Phone */
 @media (max-width:760px) {
   body { font-size:16px; }
-  [style*="padding:0 90px"], .section, [style*="90px"] { padding-left:18px !important; padding-right:18px !important; }
+  [style*="padding:0 90px"], .section, [style*="px 90px"], [style*="0 90px"] { padding-left:18px !important; padding-right:18px !important; }
   [style*="padding:180px"] { padding-top:110px !important; }
   [style*="padding:100px"] { padding-top:60px !important; }
 
   /* Rows stack instead of squeezing side by side */
   [style*="display:flex"] { flex-wrap:wrap !important; row-gap:14px; height:auto !important; }
-  [style*="display:flex"] > [style*="width:"]:not([style*="width:150px"]):not([style*="width:130px"]):not([style*="width:56px"]):not([style*="width:16px"]) { width:100% !important; flex:1 1 100% !important; }
+  [style*="display:flex"] > [style*="width:"]:not([style*="width:150px"]):not([style*="width:130px"]):not([style*="width:56px"]):not([style*="width:16px"]):not([style*="width:13%"]) { width:100% !important; flex:1 1 100% !important; }
   /* Small items (hours, day-by-day schedule, tags) stay in compact rows */
   [style*="display:flex"] > [style*="width:13.7%"],
   [style*="display:flex"] > [style*="width:16%"] { width:30% !important; flex:1 1 30% !important; min-height:0 !important; }
@@ -43,6 +45,8 @@ img { max-width:100%; }
   .ticket-card > a img { width:90px !important; height:90px !important; }
   .ticket-card > div { width:auto !important; flex:1 1 auto !important; }
   .announce-bar { font-size:13px !important; }
+  .cider-lineup[style] > a[style] { width:30% !important; flex:0 0 30% !important; margin-bottom:10px; }
+  .cider-lineup[style] { justify-content:center !important; flex-wrap:wrap !important; }
   /* Photos keep a sensible height once full width */
   .imgbox { height:240px !important; }
   .imgbox.map { height:200px !important; }
