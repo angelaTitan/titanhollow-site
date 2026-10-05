@@ -11,6 +11,9 @@ img { max-width:100%; }
 [style*="width:700px"], [style*="width:760px"], [style*="width:820px"],
 [style*="width:1280px"] { max-width:100%; }
 
+/* House-made food cards stack on tablets */
+@media (max-width:1000px) { .menu-card { width:100% !important; } }
+
 /* Cider cards two per row until there is room for four */
 @media (min-width:761px) and (max-width:1000px) {
   [id^="cider-"][style*="width:23.5%"] { width:48% !important; }
@@ -53,6 +56,9 @@ img { max-width:100%; }
   .cider-lineup[style] > a[style] { width:30% !important; flex:0 0 30% !important; margin-bottom:10px; }
   .cider-lineup[style] { justify-content:center !important; flex-wrap:wrap !important; }
   .mm-arch { max-width:240px; margin:10px auto 0 !important; }
+  .friends-row > a { width:auto !important; flex:0 0 auto !important; }
+  #holiday-bash [style*="width:34%"] { width:70% !important; flex:0 0 70% !important; margin:0 auto; }
+  #holiday-bash > div { padding:20px !important; }
   /* Photos keep a sensible height once full width */
   .imgbox { height:240px !important; }
   .imgbox.map { height:200px !important; }
